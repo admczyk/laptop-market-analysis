@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "lantre",
+        "domain": "lantre.pl",
+        "rating_score": "4,8",
+        "rating_count": "522"
+    },
+    {
+        "id": 2,
+        "name": "allegro",
+        "domain": "allegro.pl",
+        "rating_score": "4,8",
+        "rating_count": "11205"
+    },
+    {
+        "id": 3,
+        "name": "vobis",
+        "domain": "vobis.pl",
+        "rating_score": "4,4",
+        "rating_count": "1555"
+    },
+    {
+        "id": 4,
+        "name": "oleole",
+        "domain": "oleole.pl",
+        "rating_score": "4,7",
+        "rating_count": "412"
+    },
+    {
+        "id": 5,
+        "name": "euro",
+        "domain": "euro.com.pl",
+        "rating_score": "4,6",
+        "rating_count": "1311"
+    },
+    {
+        "id": 6,
+        "name": "komputronik",
+        "domain": "komputronik.pl",
+        "rating_score": "4,6",
+        "rating_count": "141"
+    },
+    {
+        "id": 7,
+        "name": "SuperTech",
+        "domain": "SuperTech.pl",
+        "rating_score": "3,8",
+        "rating_count": "229"
+    },
+    {
+        "id": 8,
+        "name": "kaufland",
+        "domain": "kaufland.pl",
+        "rating_score": "2,1",
+        "rating_count": "115"
+    }
+]

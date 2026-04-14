@@ -1,0 +1,50 @@
+[
+    {
+        "product_id": 1,
+        "store_id": 1,
+        "price": "3 489,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 2,
+        "price": "3 289,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 3,
+        "price": "3 679,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 4,
+        "price": "3 699,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 5,
+        "price": "3 699,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 6,
+        "price": "3 699,00",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 7,
+        "price": "3 822,99",
+        "currency": "PLN"
+    },
+    {
+        "product_id": 1,
+        "store_id": 8,
+        "price": "3 883,99",
+        "currency": "PLN"
+    }
+]

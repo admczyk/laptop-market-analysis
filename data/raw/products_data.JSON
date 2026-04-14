@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "Marka": "Apple",
+        "Model": "MacBook Air 13,6\" MC7X4ZE/A",
+        "Procesor": {
+            "Rodzina procesora": "Apple M",
+            "Model procesora": "Apple M2",
+            "Liczba rdzeni procesora": "8"
+        },
+        "Ekran": {
+            "Przekątna ekranu": "13 cali",
+            "Rozdzielczość ekranu": "2560x1664",
+            "Rodzaj matrycy": "IPS",
+            "Częstotliwość odświeżania": "60Hz",
+            "Powłoka ekranu": "Błyszcząca"
+        },
+        "Pamięć RAM": {
+            "Pamięć RAM": "16GB",
+            "Typ pamięci RAM": "DDR5"
+        },
+        "Dysk Twardy": {
+            "Rodzaj dysku": "SSD",
+            "Pojemność dysku twardego": "256GB"
+        },
+        "Karta Graficzna": {
+            "Producent karty graficznej": "Apple",
+            "Model karty graficznej": "Apple M2",
+            "Ilość pamięci RAM karty graficznej": "Współdzielona",
+            "Rodzaj karty graficznej": "Zintegrowana"
+        },
+        "Komunikacja": {
+            "Złącza": "1x Thunderbolt",
+            "Komunikacja": [
+                "Bluetooth",
+                "Wi-Fi"
+            ],
+            "Karty pamięci": "Nie dotyczy"
+        },
+        "Fizyczne": {
+            "Wysokość": "11,3 mm",
+            "Szerokość": "304,1 mm",
+            "Głębokość": "215 mm",
+            "Waga": "1,24 kg",
+            "Kolor": "Granatowe",
+            "Materiał": "Metal"
+        },
+        "Oprogramowanie": {
+            "System operacyjny": "macOS"
+        },
+        "Dodatkowe informacje": {
+            "Funkcje dodatkowe": "Czytnik linii papilarnych",
+            "Multimedia": "Głośniki",
+            "Kolor podświetlenia klawiatury": "Biały",
+            "Rodzaj": "Ultrabooki"
+        },
+        "Kod producenta": "MC7X4ZEA",
+        "Typ urządzenia": "Konsumenckie"
+    }
+]
