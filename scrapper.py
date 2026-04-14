@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.alert import Alert
 import time
+import re
 
 driver = webdriver.Firefox()
 
@@ -13,13 +14,6 @@ cookie = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div/div/div[1]/
 cookie.click()
 
 time.sleep(3)
-
-# laptop = driver.find_element(By.CLASS_NAME, "go-to-product")
-# laptop.click()
-
-# time.sleep(5)
-
-# driver.back()
 
 # potencjalnie wez to zmien pozniej tak, aby pobieralo tylko linki / jeden element 
 # z linkiem zamiast 5 do tego samego produktu
@@ -34,21 +28,58 @@ while next_btn:
     links = [l.get_attribute("href") for l in laptops][::5]
 
     print(links)
-    for link in links[:3]:
-        driver.get(link)
+    #later change this for loop, so it iterates through len(links)
+    for i in range(len(links)):
+        driver.get(links[i])
         
         time.sleep(3)
 
         button = driver.find_element(By.CSS_SELECTOR, "li.page-tab.spec")
         button.click()
 
+        table_elements_sum = []
+        product_info = []
+
         product_name = driver.find_element(By.CLASS_NAME, "product-top__product-info__name")
         product_description = driver.find_element(By.CLASS_NAME, "product-top__product-info__tags")
-        product_info = []
-        spec_name = driver.find_elements(By.CLASS_NAME, "product-spec__group__attributes__row__name")
-        spec_value = driver.find_elements(By.CLASS_NAME, "product-spec__group__attributes__row__value")
-        for i in range(len(spec_name)):
-            print(spec_name[i].text + ': ' + spec_value[i].text)
+
+        #this part can be separate function later
+        tbodies = driver.find_elements(By.CSS_SELECTOR, "tbody")
+        for tbody in tbodies:
+            rows = tbody.find_elements(By.CLASS_NAME, "product-spec__group__attributes__row")
+            table_elements_sum.append(len(rows))
+
+        #extracts laptop product 
+        product_spec_headers = driver.find_elements(By.CLASS_NAME, "product-spec__group__header")
+        product_spec_names = driver.find_elements(By.CLASS_NAME, "product-spec__group__attributes__row__name")
+        product_spec_values = driver.find_elements(By.CLASS_NAME, "product-spec__group__attributes__row__value")
+
+        product_data = {"id": i}
+
+        start = 0
+        end = 0
+        for i in range(len(product_spec_headers) + 1):
+            start = end
+            end += table_elements_sum[i]
+            if i == 0 or i == len(product_spec_headers):
+                for key, value in zip(product_spec_names[start:end], product_spec_values[start:end]):
+                    product_data[key.text] = value.text
+            else:
+                sub_attributes = {}
+                for key, value in zip(product_spec_names[start:end], product_spec_values[start:end]):
+                    key = key.text
+                    value = value.text
+
+                    if "?" in key:
+                        key = key[:-2]
+
+                    if ", " in value:
+                        value = value.split(", ")
+                    
+                    sub_attributes[key] = value
+                product_data[product_spec_headers[i].text] = sub_attributes
+
+
 
 
         time.sleep(3)
